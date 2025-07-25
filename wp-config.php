@@ -1,9 +1,9 @@
 <?php
 // ** MySQL settings ** //
-define( 'DB_NAME', 'your_database_name' );
-define( 'DB_USER', 'your_database_user' );
-define( 'DB_PASSWORD', 'your_database_password' );
-define( 'DB_HOST', 'your-database-hostname' ); // e.g., localhost or RDS endpoint
+define( 'DB_NAME', 'database-1' );
+define( 'DB_USER', 'admin' );
+define( 'DB_PASSWORD', 'AKIAQSOI4WU4K2EJ6ZUQ' );
+define( 'DB_HOST', 'database-1.c0fk6uama867.us-east-1.rds.amazonaws.com' ); // e.g., localhost or RDS endpoint
 define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', '' );
 
