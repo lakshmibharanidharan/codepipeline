@@ -1,0 +1,6 @@
+[
+  {
+    "name": "wordpress",
+    "imageUri": "223938610529.dkr.ecr.us-east-1.amazonaws.com/wp-codepipeline:latest"
+  }
+]
