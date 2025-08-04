@@ -10,11 +10,11 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t wordpress-app .
-      - docker tag wordpress-app:latest 223938610529.dkr.ecr.us-east-1.amazonaws.com/wordpress-app:latest
+      - docker build -t aug4-wp .
+      - docker tag wordpress-app:latest 223938610529.dkr.ecr.us-east-1.amazonaws.com/aug4-wp:latest
 
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - docker push 223938610529.dkr.ecr.us-east-1.amazonaws.com/wordpress-app:latest
+      - docker push 223938610529.dkr.ecr.us-east-1.amazonaws.com/aug4-wp:latest
       - echo Build completed on `date`
