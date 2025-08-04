@@ -13,7 +13,7 @@ phases:
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - docker push <your-ecr-uri>:latest
+      - docker push 223938610529.dkr.ecr.us-east-1.amazonaws.com/wp-codepipeline:latest:latest
       - echo Build completed on `date`
 artifacts:
   files: '**/*'
