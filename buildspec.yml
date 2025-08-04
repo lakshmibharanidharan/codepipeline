@@ -5,15 +5,16 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 223938610529.dkr.ecr.us-east-1.amazonaws.com
+
   build:
     commands:
+      - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t wordpress-app .
-      - docker tag wordpress-app:latest 223938610529.dkr.ecr.us-east-1.amazonaws.com/wp-codepipeline:latest:latest
+      - docker tag wordpress-app:latest 223938610529.dkr.ecr.us-east-1.amazonaws.com/wordpress-app:latest
+
   post_build:
     commands:
       - echo Pushing the Docker image...
-      - docker push 223938610529.dkr.ecr.us-east-1.amazonaws.com/wp-codepipeline:latest:latest
+      - docker push 223938610529.dkr.ecr.us-east-1.amazonaws.com/wordpress-app:latest
       - echo Build completed on `date`
-artifacts:
-  files: '**/*'
